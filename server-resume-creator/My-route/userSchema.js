@@ -32,7 +32,7 @@ Skill:[{
 userSkill:{type:String,require:true}
 }],
   Objective: {
-    objectiver: { type: String, required: true }
+    objectiver: { type: String, required:false}
 },
 
   Project:[{
