@@ -42,12 +42,12 @@
 /* theeeeeeeeeeemmmmmmmmmmmmmmmeeeeeeeeeeeee */
 .them1{
   background-color: antiquewhite;
-  height: 100vh;
+  height: auto;
 }
 .sideSectionForThem1{
 background-color: palevioletred;
-height: 100vh;
-width: 40%;
+height: auto;
+width: 30%;
 margin-left: 1rem;
 }
 .headersec-them1{

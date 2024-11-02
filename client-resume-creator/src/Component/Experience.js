@@ -72,6 +72,7 @@ const Experience = () => {
         
         {ExperienceData.map((experience, index) => {
            return <>
+             <div key={index}>
             <div className='mt-4'style={{backgroundColor:'darkgreen' ,color:'white',height:'40px'}}>
            {index > 0 && (
                    <div className="col-md-6">
@@ -139,13 +140,14 @@ const Experience = () => {
                 class="  border-primary form-control"
                 placeholder="Leave a comment here"
                 id="floatingTextarea2"
-                name="comment"
+                name="Description"
                 value={ExperienceData.Description}
                 onChange={(e) => HandleOnChange(index, e)}
                 style={{ height: "100px" }}
               ></textarea>
             </div>
             
+          </div>
           </div>
           </> })}
           
