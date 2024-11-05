@@ -5,20 +5,23 @@ const Theme1 = () => {
   const [userData, setUserData] = useState(null);
   const userId = sessionStorage.getItem('userId');
 
-  useEffect(() => {
-    console.log('Fetching user details for userId:', userId);
 
-    const url=`http://localhost:5000/userDetail/${userId}`
-     const fetchUser=async()=>{
-      const response= await fetch(url)
-      const resJson= await response.json()
-      setUserData(resJson.user)
-     }
+useEffect(() => {
+  console.log('Fetching user details for userId:', userId);
 
-     fetchUser()
-    
-   
-  }, [userId]);
+  const fetchUser = async () => {
+    try {
+      const url = `http://localhost:5000/userDetail/${userId}`;
+      const response = await fetch(url);
+      const resJson = await response.json();
+      setUserData(resJson.user);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  fetchUser();
+}, [userId]);
 
   // Safe destructuring with a fallback to prevent null errors
   const {

@@ -9,6 +9,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use(require('./My-route/allroute'));
+
 const DB='mongodb+srv://rahmansyedsabeeha:f5lz5BLLm9Y8dV4S@resume-cluster.h3jyanz.mongodb.net/?retryWrites=true&w=majority&appName=Resume-Cluster'
 
 mongoose.connect(DB,{

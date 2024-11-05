@@ -66,14 +66,23 @@ margin-left: 1rem;
   margin-left: 3rem;
   margin-top: 9em;
 }
-.left-sideboxtem2{
-  background-color: brown;
-  width: 30%;
-  height: 100vh;
+.upp{
+  background-color: rgb(92, 90, 90);
+  height: 15vh;
+  margin: 10px;
 }
+.bORDER{
+  background-color:  rgb(92, 90, 90);
+ width: 0.5%;
+ height: 6vh;
 
-
-  
+}
+  .detail{
+    box-sizing: border-box;
+    margin-left: 20%;
+    margin-right: 2px;
+    
+  }
 
 
   
