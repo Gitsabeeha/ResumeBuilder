@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 const HeroSection = () => {
+  console.log(window.location)
   return (
     <div className='HeroContainer'>
       <div   >

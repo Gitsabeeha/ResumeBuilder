@@ -73,16 +73,24 @@ margin-left: 1rem;
 }
 .bORDER{
   background-color:  rgb(92, 90, 90);
- width: 0.5%;
+ width:10px;
  height: 6vh;
-
+ flex-shrink: 0
 }
   .detail{
-    box-sizing: border-box;
-    margin-left: 20%;
-    margin-right: 2px;
+    flex-shrink: 0;
     
   }
 
-
+  .theme2 .oBJ {
+    display: flex;
+    align-items: center;
+    margin-left: 200px; /* Ensure sections start from the same line */
+  }
+  
+  
+  .theme2 .detail {
+    margin-left: 200px; /* Consistent left margin for all details */
+  }
+  
   

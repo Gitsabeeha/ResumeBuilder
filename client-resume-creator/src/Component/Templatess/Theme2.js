@@ -51,14 +51,14 @@ const Theme2 = () => {
         <div className="oBJ d-flex m-4">
           <div className='bORDER'></div>
           <h5 className='text-center fst-italic ms-1' >OBJECTIVE</h5>
-          <div className="detail">
-            <p className='text-start fst-italic '>{Objective.objectiver || 'Description not provided.'}</p>
+          <div className="detail ">
+            <p className=' fst-italic '>{Objective.objectiver || 'Description not provided.'}</p>
           </div>
         </div>
         <div className="oBJ d-flex m-4">
           <div className='bORDER'></div>
           <h5 className='text-center fst-italic ms-1' >EXPERIENCE</h5>
-          <div className="detail">
+          <div className="detail ">
           {Experience.length ? (
                 Experience.map(exp => (
                   <div className='' key={exp._id}>
@@ -70,6 +70,75 @@ const Theme2 = () => {
               ) : (
                 <p>No employment information available.</p>
               )}
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic ms-1' >EDUCATION</h5>
+          <div className="detail">
+          {Education.length ? (
+                Education.map(edu => (
+                  <div className='' key={edu._id}>
+                    <p className='text-uppercase text-secondary-emphasis'> {edu.University}</p>
+                    <p> {edu.course}</p>
+                    <p>Grades- {edu.Grade}</p>
+                    <p>Year: {edu.year}</p>
+                  </div>
+                ))
+              ) : (
+                <p>No education information available.</p>
+              )}
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic ' >SKILLS</h5>
+          <div className="detail d-flex">
+          {Skill.length ? (
+                Skill.map(skill => (
+                  <p className='' key={skill._id}>{skill.userSkill}</p>
+                ))
+              ) : (
+                <p>No skills listed.</p>
+              )}
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic ' >PROJECT</h5>
+          <div className="detail d-flex">
+          {Project.length ? (
+                Project.map(proj => (
+                  <div  className=''key={proj._id}>
+                    <p>{proj.title}</p>
+                    <p> {proj.detail}</p>
+                  </div>
+                ))
+              ) : (
+                <p>No projects listed.</p>
+              )}
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic' >ACHIEVEMENTS AND AWARDS</h5>
+          <div className="detail d-flex">
+          <p className=''>{Achievment.achievment || 'No achievements available.'}</p>
+              <p>{Achievment.myAchiev || ''}</p>
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic ' >LANGUAGE</h5>
+          <div className="detail d-flex">
+          <p className=''>{Language.language || 'No languages listed.'}</p>
+          </div>
+        </div>
+        <div className="oBJ d-flex m-4">
+          <div className='bORDER'></div>
+          <h5 className='text-center fst-italic ' >ADDITIONAL INFO</h5>
+          <div className="detail d-flex">
+          <p className=''>{AdditionalInfo.additionalInfo || 'No additional information available.'}</p>
           </div>
         </div>
       </div>
